@@ -1,5 +1,4 @@
-import 'dart:io';
-import 'dart:convert';
+import 'package:ffmpeg_kit_flutter/ffmpeg_kit.dart';
 
 import 'package:flutter/material.dart';
 
@@ -30,9 +29,9 @@ class StreamPage extends StatefulWidget {
 class _StreamPageState extends State<StreamPage> {
   final TextEditingController _ipController = TextEditingController();
   final TextEditingController _portController = TextEditingController();
-  Process? _ffmpegProcess;
+  int? _sessionId;
 
-  bool get _isStreaming => _ffmpegProcess != null;
+  bool get _isStreaming => _sessionId != null;
 
   Future<void> _startStream() async {
     final ip = _ipController.text.trim();
@@ -44,36 +43,28 @@ class _StreamPageState extends State<StreamPage> {
       return;
     }
 
-    final args = [
+    final command = [
       '-f',
       'dshow',
       '-i',
-      'video=Integrated Camera', // Change device name as needed
+      'video=Integrated Camera', // Adjust or replace for mobile inputs
       '-vcodec',
       'libx264',
       '-f',
       'rtp',
-      'rtp://$ip:$port',
-    ];
+      'rtp://$ip:$port'
+    ].join(' ');
 
     try {
-      final process = await Process.start('ffmpeg', args);
-      setState(() {
-        _ffmpegProcess = process;
-      });
-
-      process.stderr.transform(utf8.decoder).listen((data) {
-        debugPrint(data);
-      });
-      process.stdout.transform(utf8.decoder).listen((data) {
-        debugPrint(data);
-      });
-      process.exitCode.then((_) {
+      final session = await FFmpegKit.executeAsync(command, (session) async {
         if (mounted) {
           setState(() {
-            _ffmpegProcess = null;
+            _sessionId = null;
           });
         }
+      });
+      setState(() {
+        _sessionId = session.getSessionId();
       });
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -83,10 +74,12 @@ class _StreamPageState extends State<StreamPage> {
   }
 
   void _stopStream() {
-    _ffmpegProcess?.kill(ProcessSignal.sigterm);
-    setState(() {
-      _ffmpegProcess = null;
-    });
+    if (_sessionId != null) {
+      FFmpegKit.cancel(_sessionId);
+      setState(() {
+        _sessionId = null;
+      });
+    }
   }
 
   @override
