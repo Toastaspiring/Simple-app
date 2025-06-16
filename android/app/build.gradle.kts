@@ -42,3 +42,7 @@ android {
 flutter {
     source = "../.."
 }
+
+dependencies {
+    implementation("com.arthenica:ffmpeg-kit-full:5.1")
+}
