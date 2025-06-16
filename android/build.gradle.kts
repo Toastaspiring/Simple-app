@@ -2,7 +2,6 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://packages.tanersener.com/ffmpeg-kit/v6") }
     }
 }
 

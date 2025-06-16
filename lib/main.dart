@@ -1,4 +1,4 @@
-import 'package:ffmpeg_kit_flutter/ffmpeg_kit.dart';
+import 'package:flutter_gstreamer_player/flutter_gstreamer_player.dart';
 
 import 'package:flutter/material.dart';
 
@@ -29,9 +29,10 @@ class StreamPage extends StatefulWidget {
 class _StreamPageState extends State<StreamPage> {
   final TextEditingController _ipController = TextEditingController();
   final TextEditingController _portController = TextEditingController();
-  int? _sessionId;
+  GstPlayerTextureController? _controller;
+  int? _playerId;
 
-  bool get _isStreaming => _sessionId != null;
+  bool get _isStreaming => _playerId != null;
 
   Future<void> _startStream() async {
     final ip = _ipController.text.trim();
@@ -43,41 +44,40 @@ class _StreamPageState extends State<StreamPage> {
       return;
     }
 
-    final command = [
-      '-f',
-      'dshow',
-      '-i',
-      'video=Integrated Camera', // Adjust or replace for mobile inputs
-      '-vcodec',
-      'libx264',
-      '-f',
-      'rtp',
-      'rtp://$ip:$port'
+    final pipeline = [
+      'autovideosrc',
+      '!',
+      'x264enc',
+      'tune=zerolatency',
+      'bitrate=800',
+      'speed-preset=superfast',
+      '!',
+      'rtph264pay',
+      '!',
+      'udpsink',
+      'host=$ip',
+      'port=$port'
     ].join(' ');
 
     try {
-      final session = await FFmpegKit.executeAsync(command, (session) async {
-        if (mounted) {
-          setState(() {
-            _sessionId = null;
-          });
-        }
-      });
+      _controller = GstPlayerTextureController();
+      final id = await _controller!.initialize(pipeline);
       setState(() {
-        _sessionId = session.getSessionId();
+        _playerId = id;
       });
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Failed to start ffmpeg: $e')),
+        SnackBar(content: Text('Failed to start GStreamer: $e')),
       );
     }
   }
 
   void _stopStream() {
-    if (_sessionId != null) {
-      FFmpegKit.cancel(_sessionId);
+    if (_controller != null) {
+      _controller!.dispose();
       setState(() {
-        _sessionId = null;
+        _controller = null;
+        _playerId = null;
       });
     }
   }
