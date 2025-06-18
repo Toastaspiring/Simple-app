@@ -47,12 +47,12 @@ repositories {
     google()
     mavenCentral()
     flatDir {
-        dirs("../../app/libs")
+        dirs("libs")
     }
 }
 
 dependencies {
-    implementation(files("../../app/libs/ffmpeg-kit.aar"))
+    implementation(files("libs/ffmpeg-kit.aar"))
 
     // If needed:
     implementation("androidx.multidex:multidex:2.0.1")

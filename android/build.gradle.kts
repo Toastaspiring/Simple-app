@@ -5,7 +5,7 @@ allprojects {
         gradlePluginPortal()
         // Use local FFmpeg library instead of remote repository
         flatDir {
-            dirs("../app/libs")
+            dirs("app/libs")
         }
     }
 }

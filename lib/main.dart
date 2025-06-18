@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   final portController = TextEditingController();
 
   Future<void> startStreaming() async {
+    await [Permission.camera, Permission.microphone].request();
     const platform = MethodChannel('rtp.camera');
     try {
       await platform.invokeMethod('startStream', {
