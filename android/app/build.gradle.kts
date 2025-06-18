@@ -43,9 +43,17 @@ flutter {
     source = "../.."
 }
 
+repositories {
+    google()
+    mavenCentral()
+    flatDir {
+        dirs("../../app/libs")
+    }
+}
+
 dependencies {
-    implementation(name: 'ffmpeg-kit', ext: 'aar')
+    implementation(files("../../app/libs/ffmpeg-kit.aar"))
 
     // If needed:
-    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation("androidx.multidex:multidex:2.0.1")
 }
