@@ -3,8 +3,9 @@ allprojects {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven {
-            url = uri("https://www.arthenica.com/maven")
+        // Use local FFmpeg library instead of remote repository
+        flatDir {
+            dirs("../app/libs")
         }
     }
 }
