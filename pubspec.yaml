@@ -9,6 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  ffmpeg_kit_flutter:
+    path: ../ffmpeg-kit/flutter/flutter
 
 dev_dependencies:
   flutter_test:

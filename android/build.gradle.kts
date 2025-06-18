@@ -2,7 +2,10 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven(url = "https://www.jitpack.io")
+        gradlePluginPortal()
+        maven {
+            url = uri("https://www.arthenica.com/maven")
+        }
     }
 }
 

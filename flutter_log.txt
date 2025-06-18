@@ -1,0 +1,2100 @@
+[ +327 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+[   +8 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +7 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[   +6 ms] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[ +110 ms] executing: C:\Users\louis\AppData\Local\Android\sdk\platform-tools\adb.exe devices -l
+[ +126 ms] List of devices attached
+           usyt7xijf6fmcygq       device product:tanzanite_eea model:24117RN76E device:tanzanite transport_id:2
+[   +9 ms] C:\Users\louis\AppData\Local\Android\sdk\platform-tools\adb.exe -s usyt7xijf6fmcygq shell getprop
+[ +169 ms] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+[        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+[   +3 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+[        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+[ +230 ms] Skipping pub get: version match.
+[  +22 ms] executing: [C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app/] C:\tools\flutter\bin\cache\dart-sdk\bin\dart pub --suppress-analytics deps --json
+[ +623 ms] {
+             "root": "rtp_streamer",
+             "packages": [
+               {
+                 "name": "rtp_streamer",
+                 "version": "0.1.0",
+                 "kind": "root",
+                 "source": "root",
+                 "dependencies": [
+                   "flutter",
+                   "flutter_test"
+                 ],
+                 "directDependencies": [
+                   "flutter"
+                 ],
+                 "devDependencies": [
+                   "flutter_test"
+                 ]
+               },
+               {
+                 "name": "flutter_test",
+                 "version": "0.0.0",
+                 "kind": "dev",
+                 "source": "sdk",
+                 "dependencies": [
+                   "flutter",
+                   "test_api",
+                   "matcher",
+                   "path",
+                   "fake_async",
+                   "clock",
+                   "stack_trace",
+                   "vector_math",
+                   "leak_tracker_flutter_testing",
+                   "async",
+                   "boolean_selector",
+                   "characters",
+                   "collection",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "material_color_utilities",
+                   "meta",
+                   "source_span",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph",
+                   "vm_service"
+                 ],
+                 "directDependencies": [
+                   "flutter",
+                   "test_api",
+                   "matcher",
+                   "path",
+                   "fake_async",
+                   "clock",
+                   "stack_trace",
+                   "vector_math",
+                   "leak_tracker_flutter_testing",
+                   "async",
+                   "boolean_selector",
+                   "characters",
+                   "collection",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "material_color_utilities",
+                   "meta",
+                   "source_span",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph",
+                   "vm_service"
+                 ]
+               },
+               {
+                 "name": "vm_service",
+                 "version": "15.0.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "term_glyph",
+                 "version": "1.2.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "string_scanner",
+                 "version": "1.4.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "source_span"
+                 ],
+                 "directDependencies": [
+                   "source_span"
+                 ]
+               },
+               {
+                 "name": "source_span",
+                 "version": "1.10.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection",
+                   "path",
+                   "term_glyph"
+                 ],
+                 "directDependencies": [
+                   "collection",
+                   "path",
+                   "term_glyph"
+                 ]
+               },
+               {
+                 "name": "path",
+                 "version": "1.9.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "collection",
+                 "version": "1.19.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "stream_channel",
+                 "version": "2.1.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async"
+                 ],
+                 "directDependencies": [
+                   "async"
+                 ]
+               },
+               {
+                 "name": "async",
+                 "version": "2.13.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "collection",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "meta",
+                 "version": "1.16.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "material_color_utilities",
+                 "version": "0.11.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection"
+                 ],
+                 "directDependencies": [
+                   "collection"
+                 ]
+               },
+               {
+                 "name": "leak_tracker_testing",
+                 "version": "3.0.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "leak_tracker",
+                   "matcher",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "leak_tracker",
+                   "matcher",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "matcher",
+                 "version": "0.12.17",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async",
+                   "meta",
+                   "stack_trace",
+                   "term_glyph",
+                   "test_api"
+                 ],
+                 "directDependencies": [
+                   "async",
+                   "meta",
+                   "stack_trace",
+                   "term_glyph",
+                   "test_api"
+                 ]
+               },
+               {
+                 "name": "test_api",
+                 "version": "0.7.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async",
+                   "boolean_selector",
+                   "collection",
+                   "meta",
+                   "source_span",
+                   "stack_trace",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph"
+                 ],
+                 "directDependencies": [
+                   "async",
+                   "boolean_selector",
+                   "collection",
+                   "meta",
+                   "source_span",
+                   "stack_trace",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph"
+                 ]
+               },
+               {
+                 "name": "stack_trace",
+                 "version": "1.12.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "path"
+                 ],
+                 "directDependencies": [
+                   "path"
+                 ]
+               },
+               {
+                 "name": "boolean_selector",
+                 "version": "2.1.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "source_span",
+                   "string_scanner"
+                 ],
+                 "directDependencies": [
+                   "source_span",
+                   "string_scanner"
+                 ]
+               },
+               {
+                 "name": "leak_tracker",
+                 "version": "10.0.9",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "clock",
+                   "collection",
+                   "meta",
+                   "path",
+                   "vm_service"
+                 ],
+                 "directDependencies": [
+                   "clock",
+                   "collection",
+                   "meta",
+                   "path",
+                   "vm_service"
+                 ]
+               },
+               {
+                 "name": "clock",
+                 "version": "1.1.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "characters",
+                 "version": "1.4.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "leak_tracker_flutter_testing",
+                 "version": "3.0.9",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "flutter",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "matcher",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "flutter",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "matcher",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "flutter",
+                 "version": "0.0.0",
+                 "kind": "direct",
+                 "source": "sdk",
+                 "dependencies": [
+                   "characters",
+                   "collection",
+                   "material_color_utilities",
+                   "meta",
+                   "vector_math",
+                   "sky_engine"
+                 ],
+                 "directDependencies": [
+                   "characters",
+                   "collection",
+                   "material_color_utilities",
+                   "meta",
+                   "vector_math",
+                   "sky_engine"
+                 ]
+               },
+               {
+                 "name": "sky_engine",
+                 "version": "0.0.0",
+                 "kind": "transitive",
+                 "source": "sdk",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "vector_math",
+                 "version": "2.1.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "fake_async",
+                 "version": "1.3.3",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "clock",
+                   "collection"
+                 ],
+                 "directDependencies": [
+                   "clock",
+                   "collection"
+                 ]
+               }
+             ],
+             "sdks": [
+               {
+                 "name": "Dart",
+                 "version": "3.8.1"
+               },
+               {
+                 "name": "Flutter",
+                 "version": "3.32.4"
+               }
+             ],
+             "executables": []
+           }
+[ +158 ms] executing: [C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app/] C:\tools\flutter\bin\cache\dart-sdk\bin\dart pub --suppress-analytics deps --json
+[ +539 ms] {
+             "root": "rtp_streamer",
+             "packages": [
+               {
+                 "name": "rtp_streamer",
+                 "version": "0.1.0",
+                 "kind": "root",
+                 "source": "root",
+                 "dependencies": [
+                   "flutter",
+                   "flutter_test"
+                 ],
+                 "directDependencies": [
+                   "flutter"
+                 ],
+                 "devDependencies": [
+                   "flutter_test"
+                 ]
+               },
+               {
+                 "name": "flutter_test",
+                 "version": "0.0.0",
+                 "kind": "dev",
+                 "source": "sdk",
+                 "dependencies": [
+                   "flutter",
+                   "test_api",
+                   "matcher",
+                   "path",
+                   "fake_async",
+                   "clock",
+                   "stack_trace",
+                   "vector_math",
+                   "leak_tracker_flutter_testing",
+                   "async",
+                   "boolean_selector",
+                   "characters",
+                   "collection",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "material_color_utilities",
+                   "meta",
+                   "source_span",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph",
+                   "vm_service"
+                 ],
+                 "directDependencies": [
+                   "flutter",
+                   "test_api",
+                   "matcher",
+                   "path",
+                   "fake_async",
+                   "clock",
+                   "stack_trace",
+                   "vector_math",
+                   "leak_tracker_flutter_testing",
+                   "async",
+                   "boolean_selector",
+                   "characters",
+                   "collection",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "material_color_utilities",
+                   "meta",
+                   "source_span",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph",
+                   "vm_service"
+                 ]
+               },
+               {
+                 "name": "vm_service",
+                 "version": "15.0.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "term_glyph",
+                 "version": "1.2.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "string_scanner",
+                 "version": "1.4.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "source_span"
+                 ],
+                 "directDependencies": [
+                   "source_span"
+                 ]
+               },
+               {
+                 "name": "source_span",
+                 "version": "1.10.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection",
+                   "path",
+                   "term_glyph"
+                 ],
+                 "directDependencies": [
+                   "collection",
+                   "path",
+                   "term_glyph"
+                 ]
+               },
+               {
+                 "name": "path",
+                 "version": "1.9.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "collection",
+                 "version": "1.19.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "stream_channel",
+                 "version": "2.1.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async"
+                 ],
+                 "directDependencies": [
+                   "async"
+                 ]
+               },
+               {
+                 "name": "async",
+                 "version": "2.13.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "collection",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "meta",
+                 "version": "1.16.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "material_color_utilities",
+                 "version": "0.11.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection"
+                 ],
+                 "directDependencies": [
+                   "collection"
+                 ]
+               },
+               {
+                 "name": "leak_tracker_testing",
+                 "version": "3.0.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "leak_tracker",
+                   "matcher",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "leak_tracker",
+                   "matcher",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "matcher",
+                 "version": "0.12.17",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async",
+                   "meta",
+                   "stack_trace",
+                   "term_glyph",
+                   "test_api"
+                 ],
+                 "directDependencies": [
+                   "async",
+                   "meta",
+                   "stack_trace",
+                   "term_glyph",
+                   "test_api"
+                 ]
+               },
+               {
+                 "name": "test_api",
+                 "version": "0.7.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async",
+                   "boolean_selector",
+                   "collection",
+                   "meta",
+                   "source_span",
+                   "stack_trace",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph"
+                 ],
+                 "directDependencies": [
+                   "async",
+                   "boolean_selector",
+                   "collection",
+                   "meta",
+                   "source_span",
+                   "stack_trace",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph"
+                 ]
+               },
+               {
+                 "name": "stack_trace",
+                 "version": "1.12.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "path"
+                 ],
+                 "directDependencies": [
+                   "path"
+                 ]
+               },
+               {
+                 "name": "boolean_selector",
+                 "version": "2.1.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "source_span",
+                   "string_scanner"
+                 ],
+                 "directDependencies": [
+                   "source_span",
+                   "string_scanner"
+                 ]
+               },
+               {
+                 "name": "leak_tracker",
+                 "version": "10.0.9",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "clock",
+                   "collection",
+                   "meta",
+                   "path",
+                   "vm_service"
+                 ],
+                 "directDependencies": [
+                   "clock",
+                   "collection",
+                   "meta",
+                   "path",
+                   "vm_service"
+                 ]
+               },
+               {
+                 "name": "clock",
+                 "version": "1.1.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "characters",
+                 "version": "1.4.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "leak_tracker_flutter_testing",
+                 "version": "3.0.9",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "flutter",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "matcher",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "flutter",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "matcher",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "flutter",
+                 "version": "0.0.0",
+                 "kind": "direct",
+                 "source": "sdk",
+                 "dependencies": [
+                   "characters",
+                   "collection",
+                   "material_color_utilities",
+                   "meta",
+                   "vector_math",
+                   "sky_engine"
+                 ],
+                 "directDependencies": [
+                   "characters",
+                   "collection",
+                   "material_color_utilities",
+                   "meta",
+                   "vector_math",
+                   "sky_engine"
+                 ]
+               },
+               {
+                 "name": "sky_engine",
+                 "version": "0.0.0",
+                 "kind": "transitive",
+                 "source": "sdk",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "vector_math",
+                 "version": "2.1.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "fake_async",
+                 "version": "1.3.3",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "clock",
+                   "collection"
+                 ],
+                 "directDependencies": [
+                   "clock",
+                   "collection"
+                 ]
+               }
+             ],
+             "sdks": [
+               {
+                 "name": "Dart",
+                 "version": "3.8.1"
+               },
+               {
+                 "name": "Flutter",
+                 "version": "3.32.4"
+               }
+             ],
+             "executables": []
+           }
+[  +88 ms] executing: [C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app/] C:\tools\flutter\bin\cache\dart-sdk\bin\dart pub --suppress-analytics deps --json
+[ +566 ms] {
+             "root": "rtp_streamer",
+             "packages": [
+               {
+                 "name": "rtp_streamer",
+                 "version": "0.1.0",
+                 "kind": "root",
+                 "source": "root",
+                 "dependencies": [
+                   "flutter",
+                   "flutter_test"
+                 ],
+                 "directDependencies": [
+                   "flutter"
+                 ],
+                 "devDependencies": [
+                   "flutter_test"
+                 ]
+               },
+               {
+                 "name": "flutter_test",
+                 "version": "0.0.0",
+                 "kind": "dev",
+                 "source": "sdk",
+                 "dependencies": [
+                   "flutter",
+                   "test_api",
+                   "matcher",
+                   "path",
+                   "fake_async",
+                   "clock",
+                   "stack_trace",
+                   "vector_math",
+                   "leak_tracker_flutter_testing",
+                   "async",
+                   "boolean_selector",
+                   "characters",
+                   "collection",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "material_color_utilities",
+                   "meta",
+                   "source_span",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph",
+                   "vm_service"
+                 ],
+                 "directDependencies": [
+                   "flutter",
+                   "test_api",
+                   "matcher",
+                   "path",
+                   "fake_async",
+                   "clock",
+                   "stack_trace",
+                   "vector_math",
+                   "leak_tracker_flutter_testing",
+                   "async",
+                   "boolean_selector",
+                   "characters",
+                   "collection",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "material_color_utilities",
+                   "meta",
+                   "source_span",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph",
+                   "vm_service"
+                 ]
+               },
+               {
+                 "name": "vm_service",
+                 "version": "15.0.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "term_glyph",
+                 "version": "1.2.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "string_scanner",
+                 "version": "1.4.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "source_span"
+                 ],
+                 "directDependencies": [
+                   "source_span"
+                 ]
+               },
+               {
+                 "name": "source_span",
+                 "version": "1.10.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection",
+                   "path",
+                   "term_glyph"
+                 ],
+                 "directDependencies": [
+                   "collection",
+                   "path",
+                   "term_glyph"
+                 ]
+               },
+               {
+                 "name": "path",
+                 "version": "1.9.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "collection",
+                 "version": "1.19.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "stream_channel",
+                 "version": "2.1.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async"
+                 ],
+                 "directDependencies": [
+                   "async"
+                 ]
+               },
+               {
+                 "name": "async",
+                 "version": "2.13.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "collection",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "meta",
+                 "version": "1.16.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "material_color_utilities",
+                 "version": "0.11.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection"
+                 ],
+                 "directDependencies": [
+                   "collection"
+                 ]
+               },
+               {
+                 "name": "leak_tracker_testing",
+                 "version": "3.0.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "leak_tracker",
+                   "matcher",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "leak_tracker",
+                   "matcher",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "matcher",
+                 "version": "0.12.17",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async",
+                   "meta",
+                   "stack_trace",
+                   "term_glyph",
+                   "test_api"
+                 ],
+                 "directDependencies": [
+                   "async",
+                   "meta",
+                   "stack_trace",
+                   "term_glyph",
+                   "test_api"
+                 ]
+               },
+               {
+                 "name": "test_api",
+                 "version": "0.7.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async",
+                   "boolean_selector",
+                   "collection",
+                   "meta",
+                   "source_span",
+                   "stack_trace",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph"
+                 ],
+                 "directDependencies": [
+                   "async",
+                   "boolean_selector",
+                   "collection",
+                   "meta",
+                   "source_span",
+                   "stack_trace",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph"
+                 ]
+               },
+               {
+                 "name": "stack_trace",
+                 "version": "1.12.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "path"
+                 ],
+                 "directDependencies": [
+                   "path"
+                 ]
+               },
+               {
+                 "name": "boolean_selector",
+                 "version": "2.1.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "source_span",
+                   "string_scanner"
+                 ],
+                 "directDependencies": [
+                   "source_span",
+                   "string_scanner"
+                 ]
+               },
+               {
+                 "name": "leak_tracker",
+                 "version": "10.0.9",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "clock",
+                   "collection",
+                   "meta",
+                   "path",
+                   "vm_service"
+                 ],
+                 "directDependencies": [
+                   "clock",
+                   "collection",
+                   "meta",
+                   "path",
+                   "vm_service"
+                 ]
+               },
+               {
+                 "name": "clock",
+                 "version": "1.1.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "characters",
+                 "version": "1.4.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "leak_tracker_flutter_testing",
+                 "version": "3.0.9",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "flutter",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "matcher",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "flutter",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "matcher",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "flutter",
+                 "version": "0.0.0",
+                 "kind": "direct",
+                 "source": "sdk",
+                 "dependencies": [
+                   "characters",
+                   "collection",
+                   "material_color_utilities",
+                   "meta",
+                   "vector_math",
+                   "sky_engine"
+                 ],
+                 "directDependencies": [
+                   "characters",
+                   "collection",
+                   "material_color_utilities",
+                   "meta",
+                   "vector_math",
+                   "sky_engine"
+                 ]
+               },
+               {
+                 "name": "sky_engine",
+                 "version": "0.0.0",
+                 "kind": "transitive",
+                 "source": "sdk",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "vector_math",
+                 "version": "2.1.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "fake_async",
+                 "version": "1.3.3",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "clock",
+                   "collection"
+                 ],
+                 "directDependencies": [
+                   "clock",
+                   "collection"
+                 ]
+               }
+             ],
+             "sdks": [
+               {
+                 "name": "Dart",
+                 "version": "3.8.1"
+               },
+               {
+                 "name": "Flutter",
+                 "version": "3.32.4"
+               }
+             ],
+             "executables": []
+           }
+[  +68 ms] Generating C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android\app\src\main\java\io\flutter\plugins\GeneratedPluginRegistrant.java
+[  +52 ms] ro.hardware = mt6789
+[        ] ro.build.characteristics = nosdcard
+[ +114 ms] Initializing file store
+[  +18 ms] Skipping target: gen_localizations
+[   +7 ms] gen_dart_plugin_registrant: Starting due to {InvalidatedReasonKind.inputChanged: The following inputs have updated contents: C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\.dart_tool\package_config_subset}
+[   +8 ms] executing: [C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app/] C:\tools\flutter\bin\cache\dart-sdk\bin\dart pub --suppress-analytics deps --json
+[ +624 ms] {
+             "root": "rtp_streamer",
+             "packages": [
+               {
+                 "name": "rtp_streamer",
+                 "version": "0.1.0",
+                 "kind": "root",
+                 "source": "root",
+                 "dependencies": [
+                   "flutter",
+                   "flutter_test"
+                 ],
+                 "directDependencies": [
+                   "flutter"
+                 ],
+                 "devDependencies": [
+                   "flutter_test"
+                 ]
+               },
+               {
+                 "name": "flutter_test",
+                 "version": "0.0.0",
+                 "kind": "dev",
+                 "source": "sdk",
+                 "dependencies": [
+                   "flutter",
+                   "test_api",
+                   "matcher",
+                   "path",
+                   "fake_async",
+                   "clock",
+                   "stack_trace",
+                   "vector_math",
+                   "leak_tracker_flutter_testing",
+                   "async",
+                   "boolean_selector",
+                   "characters",
+                   "collection",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "material_color_utilities",
+                   "meta",
+                   "source_span",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph",
+                   "vm_service"
+                 ],
+                 "directDependencies": [
+                   "flutter",
+                   "test_api",
+                   "matcher",
+                   "path",
+                   "fake_async",
+                   "clock",
+                   "stack_trace",
+                   "vector_math",
+                   "leak_tracker_flutter_testing",
+                   "async",
+                   "boolean_selector",
+                   "characters",
+                   "collection",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "material_color_utilities",
+                   "meta",
+                   "source_span",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph",
+                   "vm_service"
+                 ]
+               },
+               {
+                 "name": "vm_service",
+                 "version": "15.0.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "term_glyph",
+                 "version": "1.2.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "string_scanner",
+                 "version": "1.4.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "source_span"
+                 ],
+                 "directDependencies": [
+                   "source_span"
+                 ]
+               },
+               {
+                 "name": "source_span",
+                 "version": "1.10.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection",
+                   "path",
+                   "term_glyph"
+                 ],
+                 "directDependencies": [
+                   "collection",
+                   "path",
+                   "term_glyph"
+                 ]
+               },
+               {
+                 "name": "path",
+                 "version": "1.9.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "collection",
+                 "version": "1.19.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "stream_channel",
+                 "version": "2.1.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async"
+                 ],
+                 "directDependencies": [
+                   "async"
+                 ]
+               },
+               {
+                 "name": "async",
+                 "version": "2.13.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "collection",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "meta",
+                 "version": "1.16.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "material_color_utilities",
+                 "version": "0.11.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "collection"
+                 ],
+                 "directDependencies": [
+                   "collection"
+                 ]
+               },
+               {
+                 "name": "leak_tracker_testing",
+                 "version": "3.0.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "leak_tracker",
+                   "matcher",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "leak_tracker",
+                   "matcher",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "matcher",
+                 "version": "0.12.17",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async",
+                   "meta",
+                   "stack_trace",
+                   "term_glyph",
+                   "test_api"
+                 ],
+                 "directDependencies": [
+                   "async",
+                   "meta",
+                   "stack_trace",
+                   "term_glyph",
+                   "test_api"
+                 ]
+               },
+               {
+                 "name": "test_api",
+                 "version": "0.7.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "async",
+                   "boolean_selector",
+                   "collection",
+                   "meta",
+                   "source_span",
+                   "stack_trace",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph"
+                 ],
+                 "directDependencies": [
+                   "async",
+                   "boolean_selector",
+                   "collection",
+                   "meta",
+                   "source_span",
+                   "stack_trace",
+                   "stream_channel",
+                   "string_scanner",
+                   "term_glyph"
+                 ]
+               },
+               {
+                 "name": "stack_trace",
+                 "version": "1.12.1",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "path"
+                 ],
+                 "directDependencies": [
+                   "path"
+                 ]
+               },
+               {
+                 "name": "boolean_selector",
+                 "version": "2.1.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "source_span",
+                   "string_scanner"
+                 ],
+                 "directDependencies": [
+                   "source_span",
+                   "string_scanner"
+                 ]
+               },
+               {
+                 "name": "leak_tracker",
+                 "version": "10.0.9",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "clock",
+                   "collection",
+                   "meta",
+                   "path",
+                   "vm_service"
+                 ],
+                 "directDependencies": [
+                   "clock",
+                   "collection",
+                   "meta",
+                   "path",
+                   "vm_service"
+                 ]
+               },
+               {
+                 "name": "clock",
+                 "version": "1.1.2",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "characters",
+                 "version": "1.4.0",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "leak_tracker_flutter_testing",
+                 "version": "3.0.9",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "flutter",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "matcher",
+                   "meta"
+                 ],
+                 "directDependencies": [
+                   "flutter",
+                   "leak_tracker",
+                   "leak_tracker_testing",
+                   "matcher",
+                   "meta"
+                 ]
+               },
+               {
+                 "name": "flutter",
+                 "version": "0.0.0",
+                 "kind": "direct",
+                 "source": "sdk",
+                 "dependencies": [
+                   "characters",
+                   "collection",
+                   "material_color_utilities",
+                   "meta",
+                   "vector_math",
+                   "sky_engine"
+                 ],
+                 "directDependencies": [
+                   "characters",
+                   "collection",
+                   "material_color_utilities",
+                   "meta",
+                   "vector_math",
+                   "sky_engine"
+                 ]
+               },
+               {
+                 "name": "sky_engine",
+                 "version": "0.0.0",
+                 "kind": "transitive",
+                 "source": "sdk",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "vector_math",
+                 "version": "2.1.4",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [],
+                 "directDependencies": []
+               },
+               {
+                 "name": "fake_async",
+                 "version": "1.3.3",
+                 "kind": "transitive",
+                 "source": "hosted",
+                 "dependencies": [
+                   "clock",
+                   "collection"
+                 ],
+                 "directDependencies": [
+                   "clock",
+                   "collection"
+                 ]
+               }
+             ],
+             "sdks": [
+               {
+                 "name": "Dart",
+                 "version": "3.8.1"
+               },
+               {
+                 "name": "Flutter",
+                 "version": "3.32.4"
+               }
+             ],
+             "executables": []
+           }
+[  +68 ms] gen_dart_plugin_registrant: Complete
+[   +3 ms] Skipping target: _composite
+[   +2 ms] complete
+[  +11 ms] Launching lib\main.dart on 24117RN76E in debug mode...
+[   +7 ms] C:\tools\flutter\bin\cache\dart-sdk\bin\dartaotruntime.exe C:\tools\flutter\bin\cache\dart-sdk\bin\snapshots\frontend_server_aot.dart.snapshot --sdk-root C:\tools\flutter\bin\cache\artifacts\engine\common\flutter_patched_sdk/ --incremental --target=flutter --experimental-emit-debug-metadata -DFLUTTER_VERSION=3.32.4 -DFLUTTER_CHANNEL=stable -DFLUTTER_GIT_URL=https://github.com/flutter/flutter.git -DFLUTTER_FRAMEWORK_REVISION=6fba2447e9 -DFLUTTER_ENGINE_REVISION=8cd19e509d -DFLUTTER_DART_VERSION=3.8.1 --output-dill C:\Users\louis\AppData\Local\Temp\flutter_tools.73cb13d6\flutter_tool.c4a2ab95\app.dill --packages C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\.dart_tool\package_config.json -Ddart.vm.profile=false -Ddart.vm.product=false --enable-asserts --track-widget-creation --filesystem-scheme org-dartlang-root --initialize-from-dill build\b908bd3e048116115fd6fc7c9ea42fdd.cache.dill.track.dill --verbosity=error --enable-experiment=alternative-invalidation-strategy
+[  +27 ms] executing: C:\Users\louis\AppData\Local\Android\sdk\platform-tools\adb.exe -s usyt7xijf6fmcygq shell -x logcat -v time -t 1
+[  +14 ms] <- compile package:rtp_streamer/main.dart
+[ +174 ms] --------- beginning of main
+           06-16 11:14:54.117 I/MiuiNetworkPolicy( 1733): updateUidState uid = 10269, uidState = 19
+[  +13 ms] executing: C:\Users\louis\AppData\Local\Android\sdk\platform-tools\adb.exe version
+[  +95 ms] Android Debug Bridge version 1.0.41
+           Version 35.0.2-12147458
+           Installed as C:\Users\louis\AppData\Local\Android\sdk\platform-tools\adb.exe
+           Running on Windows 10.0.19045
+[   +2 ms] executing: C:\Users\louis\AppData\Local\Android\sdk\platform-tools\adb.exe start-server
+[ +125 ms] Building APK
+[  +22 ms] executing: C:\Program Files\Android\Android Studio\jbr\bin\java -version
+[ +363 ms] Exit code 0 from: C:\Program Files\Android\Android Studio\jbr\bin\java -version
+[        ] openjdk version "21.0.6" 2025-01-21
+           OpenJDK Runtime Environment (build 21.0.6+-13368085-b895.109)
+           OpenJDK 64-Bit Server VM (build 21.0.6+-13368085-b895.109, mixed mode)
+[   +2 ms] executing: C:\Program Files\Android\Android Studio\jbr\bin\java -version
+[ +287 ms] Exit code 0 from: C:\Program Files\Android\Android Studio\jbr\bin\java -version
+[        ] openjdk version "21.0.6" 2025-01-21
+           OpenJDK Runtime Environment (build 21.0.6+-13368085-b895.109)
+           OpenJDK 64-Bit Server VM (build 21.0.6+-13368085-b895.109, mixed mode)
+[  +15 ms] Top-level Gradle build file not found, skipping migration of task "clean".
+[   +3 ms] executing: C:\Program Files\Android\Android Studio\jbr\bin\java --version
+[ +283 ms] Exit code 0 from: C:\Program Files\Android\Android Studio\jbr\bin\java --version
+[        ] openjdk 21.0.6 2025-01-21
+           OpenJDK Runtime Environment (build 21.0.6+-13368085-b895.109)
+           OpenJDK 64-Bit Server VM (build 21.0.6+-13368085-b895.109, mixed mode)
+[   +3 ms] Version of Java is different than impacted version, no migration attempted.
+[  +17 ms] CMake project not found, skipping support Android 15 16k page size migration.
+[  +15 ms] Using gradle from C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android\gradlew.bat.
+[  +22 ms] Running Gradle task 'assembleDebug'...
+[   +2 ms] executing: [C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android/] C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android\gradlew.bat --full-stacktrace --info -Pverbose=true -Ptarget-platform=android-arm64 -Ptarget=C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\lib\main.dart -Pbase-application-name=android.app.Application -Pdart-defines=RkxVVFRFUl9WRVJTSU9OPTMuMzIuNA==,RkxVVFRFUl9DSEFOTkVMPXN0YWJsZQ==,RkxVVFRFUl9HSVRfVVJMPWh0dHBzOi8vZ2l0aHViLmNvbS9mbHV0dGVyL2ZsdXR0ZXIuZ2l0,RkxVVFRFUl9GUkFNRVdPUktfUkVWSVNJT049NmZiYTI0NDdlOQ==,RkxVVFRFUl9FTkdJTkVfUkVWSVNJT049OGNkMTllNTA5ZA==,RkxVVFRFUl9EQVJUX1ZFUlNJT049My44LjE= -Pdart-obfuscation=false -Ptrack-widget-creation=true -Ptree-shake-icons=false -Pfilesystem-scheme=org-dartlang-root assembleDebug
+[+2146 ms] Initialized native services in: C:\Users\louis\.gradle\native
+[        ] Initialized jansi services in: C:\Users\louis\.gradle\native
+[ +936 ms] The client will now receive all logging from the daemon (pid: 10548). The daemon log file: C:\Users\louis\.gradle\daemon\8.12\daemon-10548.out.log
+[   +1 ms] Starting 3rd build in daemon [uptime: 9 mins 25.095 secs, performance: 100%, GC rate: 0.00/s, heap usage: 0% of 8 GiB, non-heap usage: 4% of 4 GiB]
+[        ] Using 4 worker leases.
+[        ] Now considering [C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android, C:\tools\flutter\packages\flutter_tools\gradle] as hierarchies to watch
+[        ] Watching the file system is configured to be enabled if available
+[        ] File system watching is active
+[  +92 ms] Starting Build
+[        ] Now considering [C:\tools\flutter\packages\flutter_tools\gradle, C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android] as hierarchies to watch
+[ +416 ms] > Configure project :gradle
+[   +2 ms] Evaluating project ':gradle' using build file 'C:\tools\flutter\packages\flutter_tools\gradle\build.gradle.kts'.
+[   +2 ms] Resolved plugin [id: 'org.gradle.java-gradle-plugin']
+[        ] Resolved plugin [id: 'org.gradle.groovy']
+[        ] Resolved plugin [id: 'org.gradle.kotlin.kotlin-dsl', version: '5.1.2']
+[        ] Resolved plugin [id: 'org.jetbrains.kotlin.jvm', version: '1.9.20']
+[        ] Using Kotlin Gradle Plugin gradle85 variant
+[        ] kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+[        ] kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+[        ] file or directory 'C:\tools\flutter\packages\flutter_tools\gradle\src\main\java', not found
+[        ] Resolved plugin [id: 'dev.flutter.flutter-plugin-loader', version: '1.0.0']
+[        ] Resolved plugin [id: 'com.android.application', version: '8.7.3', apply: false]
+[        ] Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '2.1.0', apply: false]
+[  +72 ms] Resolve mutations for :gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#166,included builds,5,main]) started.
+[        ] :gradle:checkKotlinGradlePluginConfigurationErrors (Thread[#166,included builds,5,main]) started.
+[        ] > Task :gradle:checkKotlinGradlePluginConfigurationErrors SKIPPED
+[        ] Skipping task ':gradle:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+[        ] Resolve mutations for :gradle:compileKotlin (Thread[#166,included builds,5,main]) started.
+[        ] :gradle:compileKotlin (Thread[#166,included builds,5,main]) started.
+[ +104 ms] > Task :gradle:compileKotlin UP-TO-DATE
+[   +1 ms] Caching disabled for task ':gradle:compileKotlin' because:
+[        ]   Build cache is disabled
+[   +3 ms] Skipping task ':gradle:compileKotlin' as it is up-to-date.
+[   +1 ms] Resolve mutations for :gradle:compileJava (Thread[#166,included builds,5,main]) started.
+[   +1 ms] :gradle:compileJava (Thread[#166,included builds,5,main]) started.
+[        ] > Task :gradle:compileJava NO-SOURCE
+[   +1 ms] Skipping task ':gradle:compileJava' as it has no source files and no previous output files.
+[   +1 ms] Resolve mutations for :gradle:compileGroovy (Thread[#166,included builds,5,main]) started.
+[        ] :gradle:compileGroovy (Thread[#166,included builds,5,main]) started.
+[        ] > Task :gradle:compileGroovy NO-SOURCE
+[        ] Skipping task ':gradle:compileGroovy' as it has no source files and no previous output files.
+[        ] Resolve mutations for :gradle:pluginDescriptors (Thread[#166,included builds,5,main]) started.
+[        ] :gradle:pluginDescriptors (Thread[#166,included builds,5,main]) started.
+[   +8 ms] > Task :gradle:pluginDescriptors UP-TO-DATE
+[        ] Caching disabled for task ':gradle:pluginDescriptors' because:
+[        ]   Build cache is disabled
+[        ]   Not worth caching
+[        ] Skipping task ':gradle:pluginDescriptors' as it is up-to-date.
+[        ] Resolve mutations for :gradle:processResources (Thread[#168,Execution worker Thread 2,5,main]) started.
+[        ] :gradle:processResources (Thread[#168,Execution worker Thread 2,5,main]) started.
+[        ] > Task :gradle:processResources UP-TO-DATE
+[        ] Caching disabled for task ':gradle:processResources' because:
+[        ]   Build cache is disabled
+[        ]   Not worth caching
+[        ] Skipping task ':gradle:processResources' as it is up-to-date.
+[        ] Resolve mutations for :gradle:classes (Thread[#166,included builds,5,main]) started.
+[        ] :gradle:classes (Thread[#166,included builds,5,main]) started.
+[        ] > Task :gradle:classes UP-TO-DATE
+[        ] Skipping task ':gradle:classes' as it has no actions.
+[        ] Resolve mutations for :gradle:jar (Thread[#166,included builds,5,main]) started.
+[        ] :gradle:jar (Thread[#166,included builds,5,main]) started.
+[        ] > Task :gradle:jar UP-TO-DATE
+[        ] Caching disabled for task ':gradle:jar' because:
+[        ]   Build cache is disabled
+[        ]   Not worth caching
+[        ] Skipping task ':gradle:jar' as it is up-to-date.
+[ +394 ms] Settings evaluated using settings file 'C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android\settings.gradle.kts'.
+[   +2 ms] Projects loaded. Root project using build file 'C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android\build.gradle.kts'.
+[        ] Included projects: [root project 'android', project ':app']
+[+1052 ms] > Configure project :app
+[        ] Evaluating project ':app' using build file 'C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android\app\build.gradle.kts'.
+[        ] Resolved plugin [id: 'com.android.application']
+[        ] Resolved plugin [id: 'kotlin-android']
+[        ] Resolved plugin [id: 'dev.flutter.flutter-gradle-plugin']
+[        ] Using default execution profile
+[        ] Using Kotlin Gradle Plugin gradle85 variant
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[   +1 ms] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +4 ms] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[   +3 ms] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[   +1 ms] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] C/C++: android.ndkVersion from module build.gradle is [27.0.12077973]
+[        ] C/C++: android.ndkPath from module build.gradle is not set
+[        ] C/C++: ndk.dir in local.properties is not set
+[        ] C/C++: Not considering ANDROID_NDK_HOME because support was removed after deprecation period.
+[        ] C/C++: sdkFolder is C:\Users\louis\AppData\Local\Android\sdk
+[        ] > Configure project :
+[        ] Evaluating root project 'android' using build file 'C:\Users\louis\Documents\WORK\Viadex\project_archive\Simple-app\android\build.gradle.kts'.
+[        ] All projects evaluated.
+[        ] Task name matched 'assembleDebug'
+[        ] Selected primary task 'assembleDebug' from project :
+[ +283 ms] Tasks to be executed: [task ':app:DebugMinSdkCheck', task ':app:preBuild', task ':app:preDebugBuild', task ':app:mergeDebugNativeDebugMetadata', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:compileFlutterBuildDebug', task ':app:packJniLibsflutterBuildDebug', task ':app:checkDebugAarMetadata', task ':app:cleanMergeDebugAssets', task ':app:mergeDebugShaders', task ':app:compileDebugShaders', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:copyFlutterAssetsDebug', task ':app:generateDebugResValues', task ':app:mapDebugSourceSetPaths', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:parseDebugLocalResources', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:compressDebugAssets', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:desugarDebugFileDependencies', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:dexBuilderDebug', task ':app:mergeProjectDexDebug', task ':app:preProfileBuild', task ':app:configureCMakeDebug[arm64-v8a]', task ':app:buildCMakeDebug[arm64-v8a]', task ':app:configureCMakeDebug[armeabi-v7a]', task ':app:buildCMakeDebug[armeabi-v7a]', task ':app:configureCMakeDebug[x86]', task ':app:buildCMakeDebug[x86]', task ':app:configureCMakeDebug[x86_64]', task ':app:buildCMakeDebug[x86_64]', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:assembleDebug']
+[        ] Tasks that were excluded: []
+[  +99 ms] Resolve mutations for :app:DebugMinSdkCheck (Thread[#166,included builds,5,main]) started.
+[        ] :app:DebugMinSdkCheck (Thread[#166,included builds,5,main]) started.
+[        ] > Task :app:DebugMinSdkCheck
+[   +9 ms] Caching disabled for task ':app:DebugMinSdkCheck' because:
+[   +8 ms]   Build cache is disabled
+[   +2 ms] Task ':app:DebugMinSdkCheck' is not up-to-date because:
+[        ]   Task has not declared any outputs despite executing actions.
+[        ] Resolve mutations for :app:preBuild (Thread[#166,included builds,5,main]) started.
+[        ] :app:preBuild (Thread[#166,included builds,5,main]) started.
+[        ] > Task :app:preBuild UP-TO-DATE
+[        ] Skipping task ':app:preBuild' as it has no actions.
+[        ] Resolve mutations for :app:preDebugBuild (Thread[#166,included builds,5,main]) started.
+[        ] :app:preDebugBuild (Thread[#166,included builds,5,main]) started.
+[        ] > Task :app:preDebugBuild UP-TO-DATE
+[        ] Skipping task ':app:preDebugBuild' as it has no actions.
+[        ] Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[#166,included builds,5,main]) started.
+[        ] :app:mergeDebugNativeDebugMetadata (Thread[#166,included builds,5,main]) started.
+[        ] > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+[        ] Skipping task ':app:mergeDebugNativeDebugMetadata' as it has no source files and no previous output files.
+[        ] Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[#166,included builds,5,main]) started.
+[        ] :app:checkKotlinGradlePluginConfigurationErrors (Thread[#166,included builds,5,main]) started.
+[        ] > Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+[        ] Skipping task ':app:checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+[        ] Resolve mutations for :app:compileFlutterBuildDebug (Thread[#166,included builds,5,main]) started.
+[        ] :app:compileFlutterBuildDebug (Thread[#166,included builds,5,main]) started.
+[ +159 ms] > Task :app:compileFlutterBuildDebug UP-TO-DATE
+[        ] Caching disabled for task ':app:compileFlutterBuildDebug' because:
+[        ]   Build cache is disabled
+[        ]   Caching has not been enabled for the task
+[        ] Skipping task ':app:compileFlutterBuildDebug' as it is up-to-date.
+[        ] Resolve mutations for :app:packJniLibsflutterBuildDebug (Thread[#166,included builds,5,main]) started.
+[        ] :app:packJniLibsflutterBuildDebug (Thread[#166,included builds,5,main]) started.
+[        ] > Task :app:packJniLibsflutterBuildDebug UP-TO-DATE
+[        ] Caching disabled for task ':app:packJniLibsflutterBuildDebug' because:
+[        ]   Build cache is disabled
+[        ]   Not worth caching
+[        ] Skipping task ':app:packJniLibsflutterBuildDebug' as it is up-to-date.
+[        ] Resolve mutations for :app:checkDebugAarMetadata (Thread[#166,included builds,5,main]) started.
+[        ] :app:checkDebugAarMetadata (Thread[#166,included builds,5,main]) started.
+[ +794 ms] > Task :app:checkDebugAarMetadata FAILED
+[        ] Resource missing. [HTTP GET: https://dl.google.com/dl/android/maven2/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom]
+[        ] Resource missing. [HTTP GET: https://repo.maven.apache.org/maven2/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom]
+[        ] Resource missing. [HTTP GET: https://www.jitpack.io/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom]
+[        ] Resource missing. [HTTP GET: https://storage.googleapis.com/download.flutter.io/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom]
+[ +106 ms] [Incubating] Problems report is available at: file:///C:/Users/louis/Documents/WORK/Viadex/project_archive/Simple-app/build/reports/problems/problems-report.html
+[   +2 ms] FAILURE: Build failed with an exception.
+[   +4 ms] * What went wrong:
+[        ] Execution failed for task ':app:checkDebugAarMetadata'.
+[        ] > Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
+[        ]    > Could not find com.arthenica:ffmpeg-kit-full:5.1.
+[        ]      Searched in the following locations:
+[        ]        - https://dl.google.com/dl/android/maven2/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom
+[        ]        - https://repo.maven.apache.org/maven2/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom
+[        ]        - https://www.jitpack.io/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom
+[        ]        - https://storage.googleapis.com/download.flutter.io/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom
+[        ]      Required by:
+[        ]          project :app
+[        ] * Try:
+[        ] > Run with --debug option to get more log output.
+[        ] > Run with --scan to get full insights.
+[        ] > Get more help at https://help.gradle.org.
+[        ] * Exception is:
+[        ] org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:checkDebugAarMetadata'.
+[        ] 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:38)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+[        ] 	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+[        ] 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+[        ] 	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+[        ] 	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+[   +1 ms] 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+[        ] 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+[        ] 	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+[        ] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+[        ] 	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+[        ] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:46)
+[        ] 	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+[        ] 	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+[        ] 	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+[        ] 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+[        ] 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+[        ] 	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+[        ] 	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+[        ] 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+[        ] 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+[        ] 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+[        ] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+[        ] 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+[        ] 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+[        ] 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+[        ] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[        ] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[        ] 	at java.base/java.lang.Thread.run(Unknown Source)
+[  +30 ms] Caused by: org.gradle.api.internal.artifacts.ivyservice.TypedResolveException: Could not resolve all files for configuration ':app:debugRuntimeClasspath'.
+[        ] 	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailure(ResolveExceptionMapper.java:68)
+[        ] 	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailures(ResolveExceptionMapper.java:60)
+[        ] 	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$DefaultResolutionHost.consolidateFailures(DefaultConfiguration.java:1974)
+[        ] 	at org.gradle.api.internal.artifacts.configurations.ResolutionHost.rethrowFailuresAndReportProblems(ResolutionHost.java:75)
+[        ] 	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.maybeThrowResolutionFailures(ResolutionBackedFileCollection.java:86)
+[        ] 	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.visitContents(ResolutionBackedFileCollection.java:76)
+[   +1 ms] 	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
+[        ] 	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:67)
+[        ] 	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:92)
+[        ] 	at org.gradle.api.internal.file.DefaultFileCollectionFactory$ResolvingFileCollection.visitChildren(DefaultFileCollectionFactory.java:306)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
+[        ] 	at org.gradle.api.internal.tasks.PropertyFileCollection.visitChildren(PropertyFileCollection.java:48)
+[        ] 	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+[        ] 	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+[        ] 	at org.gradle.internal.fingerprint.impl.DefaultFileCollectionSnapshotter.snapshot(DefaultFileCollectionSnapshotter.java:47)
+[        ] 	at org.gradle.internal.execution.impl.DefaultInputFingerprinter$InputCollectingVisitor.visitInputFileProperty(DefaultInputFingerprinter.java:133)
+[        ] 	at org.gradle.api.internal.tasks.execution.TaskExecution.visitRegularInputs(TaskExecution.java:324)
+[   +1 ms] 	at org.gradle.internal.execution.impl.DefaultInputFingerprinter.fingerprintInputProperties(DefaultInputFingerprinter.java:63)
+[        ] 	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.captureExecutionStateWithOutputs(AbstractCaptureStateBeforeExecutionStep.java:109)
+[        ] 	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.lambda$captureExecutionState$0(AbstractCaptureStateBeforeExecutionStep.java:74)
+[        ] 	at org.gradle.internal.execution.steps.BuildOperationStep$1.call(BuildOperationStep.java:37)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+[   +1 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.internal.execution.steps.BuildOperationStep.operation(BuildOperationStep.java:34)
+[        ] 	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.captureExecutionState(AbstractCaptureStateBeforeExecutionStep.java:69)
+[        ] 	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:62)
+[        ] 	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+[        ] 	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+[        ] 	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
+[        ] 	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+[        ] 	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+[        ] 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+[        ] 	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+[        ] 	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+[        ] 	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+[        ] 	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+[        ] 	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+[        ] 	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+[        ] 	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+[        ] 	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+[        ] 	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+[        ] 	at java.base/java.util.Optional.orElseGet(Unknown Source)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+[        ] 	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+[        ] 	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+[        ] 	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+[        ] 	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+[        ] 	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+[        ] 	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
+[        ] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+[        ] 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+[        ] 	at org.gradle.api.internal.tasks.execution.ProblemsTaskPathTrackingTaskExecuter.execute(ProblemsTaskPathTrackingTaskExecuter.java:40)
+[        ] 	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+[        ] 	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+[        ] 	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+[        ] 	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+[        ] 	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+[        ] 	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+[        ] 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+[        ] 	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+[        ] 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+[        ] 	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+[        ] 	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+[        ] 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+[        ] 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+[  +50 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+[   +5 ms] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+[        ] 	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+[        ] 	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+[        ] 	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+[        ] 	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+[        ] 	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+[        ] 	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:46)
+[        ] 	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+[        ] 	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+[        ] 	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+[        ] 	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+[        ] 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+[        ] 	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+[        ] 	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+[        ] 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+[        ] 	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+[        ] 	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+[        ] 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+[        ] 	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+[        ] 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+[        ] 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+[        ] 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+[        ] 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+[        ] 	at java.base/java.lang.Thread.run(Unknown Source)
+[        ] Caused by: org.gradle.internal.resolve.ModuleVersionNotFoundException: Could not find com.arthenica:ffmpeg-kit-full:5.1.
+[        ] Searched in the following locations:
+[        ]   - https://dl.google.com/dl/android/maven2/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom
+[   +7 ms]   - https://repo.maven.apache.org/maven2/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom
+[        ]   - https://www.jitpack.io/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom
+[        ]   - https://storage.googleapis.com/download.flutter.io/com/arthenica/ffmpeg-kit-full/5.1/ffmpeg-kit-full-5.1.pom
+[        ] Required by:
+[  +21 ms]     project :app
+[   +6 ms] BUILD FAILED in 6s
+[        ] Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+[        ] You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+[        ] For more on this, please refer to https://docs.gradle.org/8.12/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+[        ] 8 actionable tasks: 2 executed, 6 up-to-date
+[        ] Watched directory hierarchies: [C:\tools\flutter\packages\flutter_tools\gradle]
+[  +96 ms] Running Gradle task 'assembleDebug'... (completed in 7,1s)
+[+5751 ms] Error: Gradle task assembleDebug failed with exit code 1
+[   +3 ms] "flutter run" took 18 038ms.
+[  +95 ms] 
+           #0      throwToolExit (package:flutter_tools/src/base/common.dart:34:3)
+           #1      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:867:9)
+           <asynchronous suspension>
+           #2      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1563:27)
+           <asynchronous suspension>
+           #3      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+           <asynchronous suspension>
+           #4      CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+           <asynchronous suspension>
+           #5      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:494:9)
+           <asynchronous suspension>
+           #6      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+           <asynchronous suspension>
+           #7      FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:431:5)
+           <asynchronous suspension>
+           #8      run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:98:11)
+           <asynchronous suspension>
+           #9      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+           <asynchronous suspension>
+           #10     main (package:flutter_tools/executable.dart:102:3)
+           <asynchronous suspension>
+
+
+[        ] Running 3 shutdown hooks
+[   +9 ms] Shutdown hooks complete
+[  +60 ms] exiting with code 1

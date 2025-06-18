@@ -44,5 +44,8 @@ flutter {
 }
 
 dependencies {
-    implementation("com.arthenica:ffmpeg-kit-full:5.1")
+    implementation(name: 'ffmpeg-kit', ext: 'aar')
+
+    // If needed:
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
