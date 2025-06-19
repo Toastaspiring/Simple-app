@@ -14,9 +14,9 @@ const STREAM_URL = 'rtp://192.168.1.103:5002'
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState<boolean>(false)
-  const [cameraPermissionStatus, setCameraPermissionStatus] =
+  const [_cameraPermissionStatus, setCameraPermissionStatus] =
     useState<string>('not-determined')
-  const [microphonePermissionStatus, setMicrophonePermissionStatus] =
+  const [_microphonePermissionStatus, setMicrophonePermissionStatus] =
     useState<string>('not-determined')
   const [isStreaming, setIsStreaming] = useState<boolean>(false)
   const devices = useCameraDevices()
@@ -63,16 +63,26 @@ export default function App() {
     // 🧪 Test source — replace with camera stream later
     const command = `-f lavfi -i testsrc=size=640x480:rate=25 -vcodec libx264 -f rtp ${STREAM_URL}`
 
-    FFmpegKit.executeAsync(command, async (session) => {
-      const returnCode = await session.getReturnCode()
-      setIsStreaming(false)
+    console.log(`Starting FFmpeg streaming to ${STREAM_URL}`)
 
-      if (returnCode?.isValueSuccess()) {
-        Alert.alert('Streaming ended', 'RTP stream finished successfully.')
-      } else {
-        Alert.alert('Error', 'FFmpeg streaming failed.')
-      }
-    })
+    FFmpegKit.executeAsync(
+      command,
+      async (session) => {
+        const returnCode = await session.getReturnCode()
+        setIsStreaming(false)
+
+        if (returnCode?.isValueSuccess()) {
+          console.log('FFmpeg streaming finished successfully')
+          Alert.alert('Streaming ended', 'RTP stream finished successfully.')
+        } else {
+          console.log(`FFmpeg streaming failed with return code ${returnCode?.getValue()}`)
+          Alert.alert('Error', 'FFmpeg streaming failed.')
+        }
+      },
+      (log) => {
+        console.log('ffmpeg:', log.getMessage())
+      },
+    )
   }
 
   if (!hasPermission) {
