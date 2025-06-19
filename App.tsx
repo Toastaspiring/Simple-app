@@ -62,9 +62,11 @@ export default function App() {
 
     // 🧪 Test source — replace with camera stream later
     const command = `-f lavfi -i testsrc=size=640x480:rate=25 -vcodec libx264 -f rtp ${STREAM_URL}`
+    console.log('Starting RTP stream with command:', command)
 
     FFmpegKit.executeAsync(command, async (session) => {
       const returnCode = await session.getReturnCode()
+      console.log('FFmpeg returned with code:', returnCode?.getValue?.())
       setIsStreaming(false)
 
       if (returnCode?.isValueSuccess()) {
