@@ -14,20 +14,38 @@ const STREAM_URL = 'rtp://192.168.1.5:1234'
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState<boolean>(false)
+  const [cameraPermissionStatus, setCameraPermissionStatus] =
+    useState<CameraPermissionStatus>('not-determined')
+  const [microphonePermissionStatus, setMicrophonePermissionStatus] =
+    useState<CameraPermissionStatus>('not-determined')
   const [isStreaming, setIsStreaming] = useState<boolean>(false)
   const devices = useCameraDevices()
   const device = devices.find((d) => d.position === 'back')
 
   useEffect(() => {
-    (async () => {
-      const cameraPermission: CameraPermissionStatus = await Camera.requestCameraPermission()
-      const micPermission: CameraPermissionStatus = await Camera.requestMicrophonePermission()
+    ;(async () => {
+      const camStatus: CameraPermissionStatus = await Camera.requestCameraPermission()
+      const micStatus: CameraPermissionStatus = await Camera.requestMicrophonePermission()
 
-      setHasPermission(
-        cameraPermission === 'granted' && micPermission === 'granted',
-      )
+      console.log(`Camera permission status: ${camStatus}`)
+      console.log(`Microphone permission status: ${micStatus}`)
+
+      setCameraPermissionStatus(camStatus)
+      setMicrophonePermissionStatus(micStatus)
+      const granted = camStatus === 'granted' && micStatus === 'granted'
+      setHasPermission(granted)
+
+      if (granted) {
+        const available = await Camera.getAvailableCameraDevices()
+        console.log('Devices after permission request:', available)
+      }
     })()
   }, [])
+
+  useEffect(() => {
+    console.log('Available devices:', devices)
+    console.log('Selected device:', device)
+  }, [devices, device])
 
   const startStreaming = async () => {
     setIsStreaming(true)
@@ -47,10 +65,18 @@ export default function App() {
     })
   }
 
-  if (!device || !hasPermission) {
+  if (!hasPermission) {
     return (
       <View style={styles.center}>
-        <Text>Waiting for permissions or camera...</Text>
+        <Text>No camera or microphone permission.</Text>
+      </View>
+    )
+  }
+
+  if (!device) {
+    return (
+      <View style={styles.center}>
+        <Text>No camera device found.</Text>
       </View>
     )
   }
