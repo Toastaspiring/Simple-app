@@ -8,12 +8,25 @@ import App from '../App';
 
 jest.mock('react-native-vision-camera', () => {
   const Camera = () => null
-  Camera.requestCameraPermission = jest.fn(() => Promise.resolve('granted'))
-  Camera.requestMicrophonePermission = jest.fn(() => Promise.resolve('granted'))
   Camera.getAvailableCameraDevices = jest.fn(() => [{ position: 'back' }])
   return {
     Camera,
     useCameraDevices: () => [{ position: 'back' }],
+  }
+})
+
+jest.mock('react-native', () => {
+  return {
+    PermissionsAndroid: {
+      request: jest.fn(() => Promise.resolve('granted')),
+      PERMISSIONS: { CAMERA: 'CAMERA', RECORD_AUDIO: 'RECORD_AUDIO' },
+      RESULTS: { GRANTED: 'granted' },
+    },
+    View: 'View',
+    Text: 'Text',
+    StyleSheet: { create: () => ({}) },
+    TouchableOpacity: 'TouchableOpacity',
+    Alert: { alert: jest.fn() },
   }
 })
 
