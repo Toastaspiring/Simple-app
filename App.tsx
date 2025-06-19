@@ -10,7 +10,7 @@ import {
 import { Camera, useCameraDevices } from 'react-native-vision-camera'
 import { FFmpegKit } from 'ffmpeg-kit-react-native'
 
-const STREAM_URL = 'rtp://192.168.1.5:1234'
+const STREAM_URL = 'rtp://192.168.1.103:5002'
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState<boolean>(false)
