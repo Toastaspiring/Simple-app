@@ -57,27 +57,38 @@ export default function App() {
     console.log('Selected device:', device)
   }, [devices, device])
 
-  const [logInterval, setLogInterval] = useState<NodeJS.Timeout | null>(null)
+  const logInterval = React.useRef<NodeJS.Timeout | null>(null)
 
-  const startStreaming = async () => {
+  const startStreaming = () => {
     console.log('Starting native streaming to rtp://192.168.1.103:5002')
     setIsStreaming(true)
-    CameraStreamer.startStreaming()
-    const id = setInterval(() => {
-      console.log('Streaming frame at', new Date().toISOString())
-    }, 1000)
-    setLogInterval(id)
   }
 
   const stopStreaming = () => {
     console.log('Stopping native streaming')
-    CameraStreamer.stopStreaming()
-    if (logInterval) {
-      clearInterval(logInterval)
-      setLogInterval(null)
-    }
     setIsStreaming(false)
   }
+
+  useEffect(() => {
+    if (isStreaming) {
+      CameraStreamer.startStreaming()
+      logInterval.current = setInterval(() => {
+        console.log('Streaming frame at', new Date().toISOString())
+      }, 1000)
+    } else {
+      CameraStreamer.stopStreaming()
+      if (logInterval.current) {
+        clearInterval(logInterval.current)
+        logInterval.current = null
+      }
+    }
+    return () => {
+      if (logInterval.current) {
+        clearInterval(logInterval.current)
+        logInterval.current = null
+      }
+    }
+  }, [isStreaming])
 
   if (!hasPermission) {
     return (
@@ -97,7 +108,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Camera style={styles.camera} device={device} isActive={true} />
+      {!isStreaming && (
+        <Camera style={styles.camera} device={device} isActive={true} />
+      )}
       <TouchableOpacity
         style={[styles.button, isStreaming && styles.buttonDisabled]}
         onPress={startStreaming}
