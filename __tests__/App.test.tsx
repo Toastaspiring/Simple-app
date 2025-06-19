@@ -10,6 +10,7 @@ jest.mock('react-native-vision-camera', () => {
   const Camera = () => null
   Camera.requestCameraPermission = jest.fn(() => Promise.resolve('granted'))
   Camera.requestMicrophonePermission = jest.fn(() => Promise.resolve('granted'))
+  Camera.getAvailableCameraDevices = jest.fn(() => [{ position: 'back' }])
   return {
     Camera,
     useCameraDevices: () => [{ position: 'back' }],
