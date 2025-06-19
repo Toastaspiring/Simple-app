@@ -57,13 +57,25 @@ export default function App() {
     console.log('Selected device:', device)
   }, [devices, device])
 
+  const [logInterval, setLogInterval] = useState<NodeJS.Timeout | null>(null)
+
   const startStreaming = async () => {
+    console.log('Starting native streaming to rtp://192.168.1.103:5002')
     setIsStreaming(true)
     CameraStreamer.startStreaming()
+    const id = setInterval(() => {
+      console.log('Streaming frame at', new Date().toISOString())
+    }, 1000)
+    setLogInterval(id)
   }
 
   const stopStreaming = () => {
+    console.log('Stopping native streaming')
     CameraStreamer.stopStreaming()
+    if (logInterval) {
+      clearInterval(logInterval)
+      setLogInterval(null)
+    }
     setIsStreaming(false)
   }
 
