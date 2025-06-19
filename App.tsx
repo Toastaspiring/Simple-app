@@ -5,39 +5,49 @@ import {
   StyleSheet,
   TouchableOpacity,
   Alert,
+  PermissionsAndroid,
 } from 'react-native'
 import { Camera, useCameraDevices } from 'react-native-vision-camera'
 import { FFmpegKit } from 'ffmpeg-kit-react-native'
-import type { CameraPermissionStatus } from 'react-native-vision-camera'
 
 const STREAM_URL = 'rtp://192.168.1.5:1234'
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState<boolean>(false)
   const [cameraPermissionStatus, setCameraPermissionStatus] =
-    useState<CameraPermissionStatus>('not-determined')
+    useState<string>('not-determined')
   const [microphonePermissionStatus, setMicrophonePermissionStatus] =
-    useState<CameraPermissionStatus>('not-determined')
+    useState<string>('not-determined')
   const [isStreaming, setIsStreaming] = useState<boolean>(false)
   const devices = useCameraDevices()
   const device = devices.find((d) => d.position === 'back')
 
   useEffect(() => {
     ;(async () => {
-      const camStatus: CameraPermissionStatus = await Camera.requestCameraPermission()
-      const micStatus: CameraPermissionStatus = await Camera.requestMicrophonePermission()
+      try {
+        const camStatus = await PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.CAMERA,
+        )
+        const micStatus = await PermissionsAndroid.request(
+          PermissionsAndroid.PERMISSIONS.RECORD_AUDIO,
+        )
 
-      console.log(`Camera permission status: ${camStatus}`)
-      console.log(`Microphone permission status: ${micStatus}`)
+        console.log(`Camera permission status: ${camStatus}`)
+        console.log(`Microphone permission status: ${micStatus}`)
 
-      setCameraPermissionStatus(camStatus)
-      setMicrophonePermissionStatus(micStatus)
-      const granted = camStatus === 'granted' && micStatus === 'granted'
-      setHasPermission(granted)
+        setCameraPermissionStatus(camStatus)
+        setMicrophonePermissionStatus(micStatus)
+        const granted =
+          camStatus === PermissionsAndroid.RESULTS.GRANTED &&
+          micStatus === PermissionsAndroid.RESULTS.GRANTED
+        setHasPermission(granted)
 
-      if (granted) {
-        const available = await Camera.getAvailableCameraDevices()
-        console.log('Devices after permission request:', available)
+        if (granted) {
+          const available = await Camera.getAvailableCameraDevices()
+          console.log('Devices after permission request:', available)
+        }
+      } catch (err) {
+        console.warn(err)
       }
     })()
   }, [])
