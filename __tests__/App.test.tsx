@@ -26,13 +26,15 @@ jest.mock('react-native', () => {
     Text: 'Text',
     StyleSheet: { create: () => ({}) },
     TouchableOpacity: 'TouchableOpacity',
-    Alert: { alert: jest.fn() },
+    NativeModules: {
+      CameraStreamer: {
+        startStreaming: jest.fn(),
+        stopStreaming: jest.fn(),
+      },
+    },
   }
 })
 
-jest.mock('ffmpeg-kit-react-native', () => ({
-  FFmpegKit: { executeAsync: jest.fn() },
-}))
 
 test('renders correctly', async () => {
   await ReactTestRenderer.act(() => {
