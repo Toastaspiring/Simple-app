@@ -4,13 +4,13 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  Alert,
   PermissionsAndroid,
+  NativeModules,
 } from 'react-native'
 import { Camera, useCameraDevices } from 'react-native-vision-camera'
-import { FFmpegKit } from 'ffmpeg-kit-react-native'
 
-const STREAM_URL = 'http://192.168.1.103:5002'
+const { CameraStreamer } = NativeModules
+
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState<boolean>(false)
@@ -59,30 +59,12 @@ export default function App() {
 
   const startStreaming = async () => {
     setIsStreaming(true)
+    CameraStreamer.startStreaming()
+  }
 
-    // 🧪 Test source — replace with camera stream later
-    const command = `-f lavfi -i testsrc=size=640x480:rate=25 -vcodec libx264 -f rtp ${STREAM_URL}`
-
-    console.log(`Starting FFmpeg streaming to ${STREAM_URL}`)
-
-    FFmpegKit.executeAsync(
-      command,
-      async (session) => {
-        const returnCode = await session.getReturnCode()
-        setIsStreaming(false)
-
-        if (returnCode?.isValueSuccess()) {
-          console.log('FFmpeg streaming finished successfully')
-          Alert.alert('Streaming ended', 'RTP stream finished successfully.')
-        } else {
-          console.log(`FFmpeg streaming failed with return code ${returnCode?.getValue()}`)
-          Alert.alert('Error', 'FFmpeg streaming failed.')
-        }
-      },
-      (log) => {
-        console.log('ffmpeg:', log.getMessage())
-      },
-    )
+  const stopStreaming = () => {
+    CameraStreamer.stopStreaming()
+    setIsStreaming(false)
   }
 
   if (!hasPermission) {
@@ -112,6 +94,13 @@ export default function App() {
         <Text style={styles.buttonText}>
           {isStreaming ? 'Streaming...' : 'Start Streaming'}
         </Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={[styles.button, !isStreaming && styles.buttonDisabled]}
+        onPress={stopStreaming}
+        disabled={!isStreaming}
+      >
+        <Text style={styles.buttonText}>Stop Streaming</Text>
       </TouchableOpacity>
     </View>
   )
