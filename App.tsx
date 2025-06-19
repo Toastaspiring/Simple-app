@@ -4,13 +4,13 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  PermissionsAndroid,
-  Platform,
   Alert,
 } from 'react-native'
 import { Camera, useCameraDevices } from 'react-native-vision-camera'
 import { FFmpegKit } from 'ffmpeg-kit-react-native'
 import type { CameraPermissionStatus } from 'react-native-vision-camera'
+
+const STREAM_URL = 'rtp://192.168.1.5:1234'
 
 export default function App() {
   const [hasPermission, setHasPermission] = useState<boolean>(false)
@@ -23,21 +23,9 @@ export default function App() {
       const cameraPermission: CameraPermissionStatus = await Camera.requestCameraPermission()
       const micPermission: CameraPermissionStatus = await Camera.requestMicrophonePermission()
 
-      if (Platform.OS === 'android') {
-        const storagePermission = await PermissionsAndroid.request(
-          PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
-        )
-
-        setHasPermission(
-          cameraPermission === 'granted' &&
-            micPermission === 'granted' &&
-            storagePermission === PermissionsAndroid.RESULTS.GRANTED,
-        )
-      } else {
-        setHasPermission(
-          cameraPermission === 'granted' && micPermission === 'granted',
-        )
-      }
+      setHasPermission(
+        cameraPermission === 'granted' && micPermission === 'granted',
+      )
     })()
   }, [])
 
@@ -45,7 +33,7 @@ export default function App() {
     setIsStreaming(true)
 
     // 🧪 Test source — replace with camera stream later
-    const command = `-f lavfi -i testsrc=size=640x480:rate=25 -vcodec libx264 -f rtp rtp://192.168.1.5:1234`
+    const command = `-f lavfi -i testsrc=size=640x480:rate=25 -vcodec libx264 -f rtp ${STREAM_URL}`
 
     FFmpegKit.executeAsync(command, async (session) => {
       const returnCode = await session.getReturnCode()
