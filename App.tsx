@@ -108,25 +108,35 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      {!isStreaming && (
-        <Camera style={styles.camera} device={device} isActive={true} />
-      )}
-      <TouchableOpacity
-        style={[styles.button, isStreaming && styles.buttonDisabled]}
-        onPress={startStreaming}
-        disabled={isStreaming}
-      >
-        <Text style={styles.buttonText}>
-          {isStreaming ? 'Streaming...' : 'Start Streaming'}
+      <View style={styles.header}>
+        <Text style={styles.headerText}>RTP Streamer</Text>
+      </View>
+
+      <View style={styles.content}>
+        {!isStreaming && (
+          <Camera style={styles.camera} device={device} isActive={true} />
+        )}
+        <Text style={styles.statusText}>
+          {isStreaming ? 'Status: Streaming' : 'Status: Not streaming'}
         </Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={[styles.button, !isStreaming && styles.buttonDisabled]}
-        onPress={stopStreaming}
-        disabled={!isStreaming}
-      >
-        <Text style={styles.buttonText}>Stop Streaming</Text>
-      </TouchableOpacity>
+
+        <View style={styles.controls}>
+          <TouchableOpacity
+            style={[styles.button, isStreaming && styles.buttonDisabled]}
+            onPress={startStreaming}
+            disabled={isStreaming}
+          >
+            <Text style={styles.buttonText}>Start</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[styles.button, !isStreaming && styles.buttonDisabled]}
+            onPress={stopStreaming}
+            disabled={!isStreaming}
+          >
+            <Text style={styles.buttonText}>Stop</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   )
 }
@@ -135,6 +145,19 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#000',
+  },
+  header: {
+    paddingVertical: 20,
+    backgroundColor: '#1E90FF',
+    alignItems: 'center',
+  },
+  headerText: {
+    color: '#fff',
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  content: {
+    flex: 1,
   },
   camera: {
     flex: 1,
@@ -156,5 +179,15 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+  },
+  statusText: {
+    color: '#fff',
+    textAlign: 'center',
+    marginVertical: 10,
+  },
+  controls: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    paddingVertical: 20,
   },
 })
