@@ -24,6 +24,8 @@ jest.mock('react-native', () => {
     },
     View: 'View',
     Text: 'Text',
+    TextInput: 'TextInput',
+    Switch: 'Switch',
     StyleSheet: { create: () => ({}) },
     TouchableOpacity: 'TouchableOpacity',
     NativeModules: {
