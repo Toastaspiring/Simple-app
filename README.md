@@ -82,6 +82,30 @@ You've successfully run and modified your React Native App. :partying_face:
 - If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
 - If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
 
+## Firebase Authentication Setup
+
+The app includes a simple email/password authentication flow powered by **Firebase Auth**. Follow these steps to enable it:
+
+1. Create a Firebase project at [firebase console](https://console.firebase.google.com) and enable **Email/Password** sign‑in under **Authentication > Sign-in method**.
+2. Install dependencies in the project root:
+
+   ```sh
+   npm install firebase
+   ```
+
+3. Copy your Firebase config from the console and replace the placeholders in `firebaseConfig.ts`:
+
+   ```ts
+   const firebaseConfig = {
+     apiKey: 'YOUR_API_KEY',
+     authDomain: 'YOUR_AUTH_DOMAIN',
+     projectId: 'YOUR_PROJECT_ID',
+     appId: 'YOUR_APP_ID',
+   };
+   ```
+
+4. Rebuild the app (`npm run android` or `npm run ios`). You will be presented with a styled login/registration screen. After creating an account or logging in, the camera streaming interface is shown.
+
 # Troubleshooting
 
 If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.

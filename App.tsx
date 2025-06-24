@@ -10,11 +10,23 @@ import {
   Switch,
 } from 'react-native'
 import { Camera, useCameraDevices } from 'react-native-vision-camera'
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+  User,
+} from 'firebase/auth'
+import { auth } from './firebaseConfig'
 
 const { CameraStreamer } = NativeModules
 
 
 export default function App() {
+  const [user, setUser] = useState<User | null>(null)
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [isRegister, setIsRegister] = useState(false)
   const [hasPermission, setHasPermission] = useState<boolean>(false)
   const [_cameraPermissionStatus, setCameraPermissionStatus] =
     useState<string>('not-determined')
@@ -27,6 +39,12 @@ export default function App() {
   const device = devices.find((d) => d.position === cameraPosition)
 
   useEffect(() => {
+    const unsub = onAuthStateChanged(auth, setUser)
+    return unsub
+  }, [user])
+
+  useEffect(() => {
+    if (!user) return
     ;(async () => {
       try {
         const camStatus = await PermissionsAndroid.request(
@@ -63,6 +81,30 @@ export default function App() {
 
   const logInterval = React.useRef<NodeJS.Timeout | null>(null)
 
+  const handleLogin = async () => {
+    try {
+      await signInWithEmailAndPassword(auth, email, password)
+    } catch (e) {
+      console.warn(e)
+    }
+  }
+
+  const handleRegister = async () => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password)
+    } catch (e) {
+      console.warn(e)
+    }
+  }
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth)
+    } catch (e) {
+      console.warn(e)
+    }
+  }
+
   const startStreaming = () => {
     console.log(`Starting native streaming to ${streamUrl}`)
     setIsStreaming(true)
@@ -94,6 +136,43 @@ export default function App() {
     }
   }, [isStreaming])
 
+  if (!user) {
+    return (
+      <View style={styles.authContainer}>
+        <Text style={styles.title}>{isRegister ? 'Register' : 'Login'}</Text>
+        <TextInput
+          style={styles.input}
+          value={email}
+          onChangeText={setEmail}
+          placeholder="Email"
+          placeholderTextColor="#999"
+          autoCapitalize="none"
+        />
+        <TextInput
+          style={styles.input}
+          value={password}
+          onChangeText={setPassword}
+          placeholder="Password"
+          placeholderTextColor="#999"
+          secureTextEntry
+        />
+        <TouchableOpacity
+          style={styles.button}
+          onPress={isRegister ? handleRegister : handleLogin}
+        >
+          <Text style={styles.buttonText}>
+            {isRegister ? 'Register' : 'Login'}
+          </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setIsRegister(!isRegister)}>
+          <Text style={styles.switchText}>
+            {isRegister ? 'Have an account? Login' : 'No account? Register'}
+          </Text>
+        </TouchableOpacity>
+      </View>
+    )
+  }
+
   if (!hasPermission) {
     return (
       <View style={styles.center}>
@@ -114,6 +193,9 @@ export default function App() {
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerText}>RTP Streamer</Text>
+        <TouchableOpacity onPress={handleLogout}>
+          <Text style={styles.logoutText}>Logout</Text>
+        </TouchableOpacity>
       </View>
 
       <View style={styles.content}>
@@ -180,7 +262,10 @@ const styles = StyleSheet.create({
   header: {
     paddingVertical: 20,
     backgroundColor: '#1E90FF',
+    flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
   },
   headerText: {
     color: '#fff',
@@ -211,6 +296,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  logoutText: {
+    color: '#fff',
+    fontSize: 16,
+  },
   statusRow: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -233,6 +322,18 @@ const styles = StyleSheet.create({
     color: '#fff',
     textAlign: 'center',
   },
+  authContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+    backgroundColor: '#000',
+  },
+  title: {
+    color: '#fff',
+    fontSize: 24,
+    textAlign: 'center',
+    marginBottom: 20,
+  },
   input: {
     borderWidth: 1,
     borderColor: '#444',
@@ -252,6 +353,11 @@ const styles = StyleSheet.create({
   switchLabel: {
     color: '#fff',
     fontSize: 16,
+  },
+  switchText: {
+    color: '#1E90FF',
+    marginTop: 10,
+    textAlign: 'center',
   },
   controls: {
     flexDirection: 'row',
