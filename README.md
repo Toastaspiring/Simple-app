@@ -1,121 +1,27 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Spixer Flutter Prototype
 
-# Getting Started
+This repository contains a minimal [Flutter](https://flutter.dev) prototype for the Spixer project. Previous React Native and web experiments have been removed in favor of a single Flutter code base.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+The app stores user credentials in a local **SQLite** database using the `sqflite` package. No Firebase dependencies remain.
 
-## Step 1: Start Metro
+## Getting Started
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+1. Install Flutter by following the instructions at [flutter.dev](https://flutter.dev/docs/get-started/install).
+2. From the `flutter` directory run `flutter pub get` to install dependencies.
+3. Connect a device or start an emulator and run `flutter run`.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Theming
 
-```sh
-# Using npm
-npm start
+Primary and secondary colors are defined in `lib/main.dart` using `primaryColor` and `secondaryColor` constants (default values: `#FF4500` and `#00BFFF`). Adjust them there to change the theme.
 
-# OR using Yarn
-yarn start
+## Project Structure
+
+```
+flutter/
+  lib/
+    main.dart       # App entry with a basic login interface
+    database.dart   # SQLite helpers for simple user storage
+  pubspec.yaml      # Flutter dependencies
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-## Firebase Authentication Setup
-
-The app includes a simple email/password authentication flow powered by **Firebase Auth**. Follow these steps to enable it:
-
-1. Create a Firebase project at [firebase console](https://console.firebase.google.com) and enable **Email/Password** sign‑in under **Authentication > Sign-in method**.
-2. Install dependencies in the project root:
-
-   ```sh
-   npm install firebase
-   ```
-
-3. Copy your Firebase config from the console and replace the placeholders in `firebaseConfig.ts`:
-
-   ```ts
-   const firebaseConfig = {
-     apiKey: 'YOUR_API_KEY',
-     authDomain: 'YOUR_AUTH_DOMAIN',
-     projectId: 'YOUR_PROJECT_ID',
-     appId: 'YOUR_APP_ID',
-   };
-   ```
-
-4. Rebuild the app (`npm run android` or `npm run ios`). You will be presented with a styled login/registration screen. After creating an account or logging in, the camera streaming interface is shown.
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This is a very small prototype meant to demonstrate a Flutter setup with SQLite. Feel free to expand it to cover the full feature set of Spixer.
