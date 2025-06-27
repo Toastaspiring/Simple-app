@@ -2,13 +2,14 @@
 
 This repository contains a minimal [Flutter](https://flutter.dev) prototype for the Spixer project. Previous React Native and web experiments have been removed in favor of a single Flutter code base.
 
-The app stores user credentials in a local **SQLite** database using the `sqflite` package. No Firebase dependencies remain.
+The app stores user credentials locally using the `shared_preferences` package so it works across all Flutter platforms. No Firebase dependencies remain.
 
 ## Getting Started
 
 1. Install Flutter by following the instructions at [flutter.dev](https://flutter.dev/docs/get-started/install).
 2. From the `flutter` directory run `flutter pub get` to install dependencies.
 3. Connect a device or start an emulator and run `flutter run`.
+4. Flutter supports Android, iOS, Web, Windows, macOS and Linux. Use `flutter run -d <device>` to target a specific platform.
 
 ## Theming
 
@@ -20,7 +21,7 @@ Primary and secondary colors are defined in `lib/main.dart` using `primaryColor`
 flutter/
   lib/
     main.dart       # App entry with a basic login interface
-    database.dart   # SQLite helpers for simple user storage
+    database.dart   # Cross-platform helpers for simple user storage
   pubspec.yaml      # Flutter dependencies
 ```
 

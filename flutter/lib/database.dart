@@ -1,33 +1,28 @@
-import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart';
+import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart';
 
-late Database db;
+late SharedPreferences prefs;
 
 Future<void> initDb() async {
-  db = await openDatabase(
-    join(await getDatabasesPath(), 'spixer.db'),
-    onCreate: (database, version) async {
-      await database.execute(
-        'CREATE TABLE users(id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT UNIQUE, password TEXT)',
-      );
-    },
-    version: 1,
-  );
+  prefs = await SharedPreferences.getInstance();
 }
 
 Future<void> createUser(String email, String password) async {
-  await db.insert(
-    'users',
-    {'email': email, 'password': password},
-    conflictAlgorithm: ConflictAlgorithm.replace,
-  );
+  final users = prefs.getStringList('users') ?? <String>[];
+  final encoded = jsonEncode({'email': email, 'password': password});
+  // Remove existing user with same email if any
+  users.removeWhere((u) => jsonDecode(u)['email'] == email);
+  users.add(encoded);
+  await prefs.setStringList('users', users);
 }
 
-Future<Map<String, Object?>?> getUser(String email, String password) async {
-  final users = await db.query(
-    'users',
-    where: 'email = ? AND password = ?',
-    whereArgs: [email, password],
-  );
-  return users.isNotEmpty ? users.first : null;
+Future<Map<String, String>?> getUser(String email, String password) async {
+  final users = prefs.getStringList('users') ?? <String>[];
+  for (final u in users) {
+    final data = jsonDecode(u) as Map<String, dynamic>;
+    if (data['email'] == email && data['password'] == password) {
+      return {'email': data['email'], 'password': data['password']};
+    }
+  }
+  return null;
 }
